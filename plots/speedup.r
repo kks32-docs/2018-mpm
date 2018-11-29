@@ -11,7 +11,9 @@ p <- ggplot(df, aes(x=df$cores, y=df$runtime)) +
      geom_line(color="black") + geom_point() +
      theme_bw() +
      # Specify axis labels
-     labs(x = "# of cores", y = "runtime for 1000 steps (s)", title="Speedup of CB-Geo MPM code (~40k material points, 16 points per cell)")
+     labs(x = "# of cores", y = "runtime for 1000 steps (s)", title="Speedup of CB-Geo MPM code (~40k material points, 16 points per cell)") +
+     # Font size
+     theme(axis.text=element_text(size=14), axis.title=element_text(size=14))
 
 
 # Save file and scale axis
